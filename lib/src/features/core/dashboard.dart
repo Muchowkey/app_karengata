@@ -1,3 +1,4 @@
+import 'package:app_karengata/src/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
@@ -8,91 +9,90 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    OutlinedButton(
-                        onPressed: () {},
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(LineAwesomeIcons.plus),
-                              Text(
-                                'Create',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text('Specify Contribution'),
-                            ],
-                          ),
-                        )),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    OutlinedButton(
-                        onPressed: () {},
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(LineAwesomeIcons.plus),
-                              Text(
-                                'Create',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text('Specify Contribution'),
-                            ],
-                          ),
-                        )),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    OutlinedButton(
-                        onPressed: () {},
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(LineAwesomeIcons.plus),
-                              Text(
-                                'Create',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text('Specify Contribution'),
-                            ],
-                          ),
-                        ))
-                  ],
-                ),
-              ),
+        appBar: AppBar(
+          leading: const Padding(
+            padding: EdgeInsets.all(25.0),
+            child: Icon(
+              LineAwesomeIcons.user,
+              size: 40,
             ),
-            const Expanded(
-              flex: 4,
-              child: Column(
+          ),
+          title: const Text('Dashboard'),
+          centerTitle: true,
+        ),
+        body: Padding(
+          padding: EdgeInsets.all(25.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Transactions'),
-                      Text('See all'),
-                    ],
-                  )
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.0,
+                          color: tSecondaryColor,
+                        ),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(LineAwesomeIcons.plus),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.0,
+                          color: tSecondaryColor,
+                        ),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(LineAwesomeIcons.plus),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.0,
+                          color: tSecondaryColor,
+                        ),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(LineAwesomeIcons.plus),
+                    ),
+                  ),
                 ],
               ),
-            )
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Transactions',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  Text(
+                    'See all',
+                    style: TextStyle(fontSize: 10),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
