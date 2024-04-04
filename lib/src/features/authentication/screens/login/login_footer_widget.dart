@@ -24,7 +24,7 @@ class LoginFooterWidget extends StatelessWidget {
           width: double.infinity,
           child: OutlinedButton.icon(
             icon: const Image(
-                image: const AssetImage(tGoogleLogoImage), width: 20.0),
+                image: AssetImage(tGoogleLogoImage), width: 20.0),
             onPressed: () {},
             label: const Text(tSignInWithGoogle),
           ),
@@ -38,8 +38,8 @@ class LoginFooterWidget extends StatelessWidget {
             TextSpan(
               text: tDontHaveAnAccount,
               style: Theme.of(context).textTheme.bodyMedium,
-              children: [
-                const TextSpan(
+              children: const [
+                TextSpan(
                   text: tSignup,
                   style: TextStyle(color: Colors.blue),
                 ),
