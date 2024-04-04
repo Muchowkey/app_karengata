@@ -30,7 +30,7 @@ class DashboardMenu extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           )),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -38,7 +38,7 @@ class DashboardMenu extends StatelessWidget {
               icon,
               size: 40,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(menuTitle),
