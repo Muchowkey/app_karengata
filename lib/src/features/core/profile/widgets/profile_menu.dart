@@ -47,7 +47,7 @@ class ProfileMenuWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 color: tAccentColor.withOpacity(0.1),
               ),
-              child: Icon(
+              child: const Icon(
                 LineAwesomeIcons.angle_right,
                 color: tPrimaryColor,
               ),
