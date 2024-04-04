@@ -1,5 +1,7 @@
 import 'package:app_karengata/src/constants/colors.dart';
+import 'package:app_karengata/src/features/core/categories/categories_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -21,7 +23,7 @@ class DashboardScreen extends StatelessWidget {
           centerTitle: true,
         ),
         body: Padding(
-          padding: EdgeInsets.all(25.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,7 +40,7 @@ class DashboardScreen extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(12)),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => const CategoriesScreen()),
                       icon: const Icon(LineAwesomeIcons.plus),
                     ),
                   ),
