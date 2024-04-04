@@ -2,7 +2,6 @@ import 'package:app_karengata/src/constants/colors.dart';
 import 'package:app_karengata/src/constants/image_strings.dart';
 import 'package:app_karengata/src/constants/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 import '../../../constants/text_strings.dart';
@@ -26,7 +25,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(LineAwesomeIcons.moon)),
+          IconButton(onPressed: () {}, icon: const Icon(LineAwesomeIcons.moon)),
         ],
       ),
       body: SingleChildScrollView(
@@ -80,14 +79,14 @@ class ProfileScreen extends StatelessWidget {
                 width: 200,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text(
-                    tEditProfile,
-                    style: TextStyle(color: tWhiteColor),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: tPrimaryColor,
                     side: BorderSide.none,
-                    shape: StadiumBorder(),
+                    shape: const StadiumBorder(),
+                  ),
+                  child: const Text(
+                    tEditProfile,
+                    style: TextStyle(color: tWhiteColor),
                   ),
                 ),
               ),
